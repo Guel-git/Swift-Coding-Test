@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5214C9A82A544B1700AD09A0 /* Level5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C9A72A544B1700AD09A0 /* Level5.swift */; };
 		52D0755C2A52A71F00B5C692 /* Level4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0755B2A52A71F00B5C692 /* Level4.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5214C9A72A544B1700AD09A0 /* Level5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level5.swift; sourceTree = "<group>"; };
 		52D075582A52A71F00B5C692 /* Baekjoon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Baekjoon; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D0755B2A52A71F00B5C692 /* Level4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +43,7 @@
 		52D0754F2A52A71F00B5C692 = {
 			isa = PBXGroup;
 			children = (
+				52D075682A544A6600B5C692 /* Level5 */,
 				52D0755A2A52A71F00B5C692 /* Level4 */,
 				52D075592A52A71F00B5C692 /* Products */,
 			);
@@ -60,6 +63,14 @@
 				52D0755B2A52A71F00B5C692 /* Level4.swift */,
 			);
 			path = Level4;
+			sourceTree = "<group>";
+		};
+		52D075682A544A6600B5C692 /* Level5 */ = {
+			isa = PBXGroup;
+			children = (
+				5214C9A72A544B1700AD09A0 /* Level5.swift */,
+			);
+			path = Level5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5214C9A82A544B1700AD09A0 /* Level5.swift in Sources */,
 				52D0755C2A52A71F00B5C692 /* Level4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
