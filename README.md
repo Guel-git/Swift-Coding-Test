@@ -61,3 +61,27 @@
   print(a.reversed())
   // 54321
   ```
+
+[Level 6]
+- 별 그리는 문제는 한 번에 print 하려고 하지말고 영역을 나눠서 풀자, String(repeating:... 보다 한 변수에 추가해서 최소 횟수로 프린트하는 게 효율적
+- for 반복문
+
+  ```swift
+  for i in stride(from: 0, to: 5, by: 1) {
+    print(i)
+  }
+  // 0 1 2 3 4
+  ```
+- replacingOccurrences: 문자열의 특정 문자 교체
+  ```swift
+  let a = "ab"
+  let b = a.replacingOccurrences(of: "b", with: "a")
+  print(b)
+  // aa
+  ```
+- dictionary의 key와 value
+  ```swift
+  let d = [1:2, 3:4]
+  print(d.keys.max()!) // 3
+  print(d.values.max()!) // 4
+  ```
