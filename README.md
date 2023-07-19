@@ -85,3 +85,28 @@
   print(d.keys.max()!) // 3
   print(d.values.max()!) // 4
   ```
+
+[Level 7]
+- 비어있는 2차원 배열 선언
+  ```swift
+   var a = [[Int]]()
+  ```
+- n차원 배열을 1차원 배열로 풀어쓰기: flatMap
+  ```swift
+  var a = [[1, 2], [3, 4]]
+  print(a.flatMap{ $0 })
+  // [1, 2, 3, 4]
+  ```
+- 배열 중 nil값 제거, 옵셔널 바인딩: compactMap
+  ```swift
+  var a: Int? = [1, nil, 2]
+  print(a.compactMap{ $0 })
+  // [1, 2]
+  ```
+- 배열 중 첫번째 요소 제거 + pop 기능: removeFirst()
+  ```swift
+  var a = [1, 2]
+  print(a.removeFirst(), a)
+  // 1 [2]
+  ```
+  파이썬의 pop처럼 제거된 요소를 프린트하거나 다른 변수에 넣을 수 있다.
