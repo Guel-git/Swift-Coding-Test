@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5202D7132A60F3CA00F6E4DF /* Level7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202D7122A60F3CA00F6E4DF /* Level7.swift */; };
+		5202D7162A6131E900F6E4DF /* Level8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202D7152A6131E900F6E4DF /* Level8.swift */; };
 		5214C9A82A544B1700AD09A0 /* Level5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C9A72A544B1700AD09A0 /* Level5.swift */; };
 		52D0755C2A52A71F00B5C692 /* Level4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0755B2A52A71F00B5C692 /* Level4.swift */; };
 		52D140532A5EA568006DCFA0 /* Level6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D140522A5EA568006DCFA0 /* Level6.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		5202D7122A60F3CA00F6E4DF /* Level7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level7.swift; sourceTree = "<group>"; };
+		5202D7152A6131E900F6E4DF /* Level8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level8.swift; sourceTree = "<group>"; };
 		5214C9A72A544B1700AD09A0 /* Level5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level5.swift; sourceTree = "<group>"; };
 		52D075582A52A71F00B5C692 /* Baekjoon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Baekjoon; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D0755B2A52A71F00B5C692 /* Level4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4.swift; sourceTree = "<group>"; };
@@ -52,9 +54,18 @@
 			path = Level7;
 			sourceTree = "<group>";
 		};
+		5202D7142A6131CB00F6E4DF /* Level8 */ = {
+			isa = PBXGroup;
+			children = (
+				5202D7152A6131E900F6E4DF /* Level8.swift */,
+			);
+			path = Level8;
+			sourceTree = "<group>";
+		};
 		52D0754F2A52A71F00B5C692 = {
 			isa = PBXGroup;
 			children = (
+				5202D7142A6131CB00F6E4DF /* Level8 */,
 				5202D7112A60F3AB00F6E4DF /* Level7 */,
 				52D1404F2A5EA552006DCFA0 /* Level6 */,
 				52D075682A544A6600B5C692 /* Level5 */,
@@ -154,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5214C9A82A544B1700AD09A0 /* Level5.swift in Sources */,
+				5202D7162A6131E900F6E4DF /* Level8.swift in Sources */,
 				52D0755C2A52A71F00B5C692 /* Level4.swift in Sources */,
 				5202D7132A60F3CA00F6E4DF /* Level7.swift in Sources */,
 				52D140532A5EA568006DCFA0 /* Level6.swift in Sources */,
