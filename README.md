@@ -1,6 +1,9 @@
 ## 백준 단계별 문제
 
-[Level 4]
+<details>
+<summary><b>Level 4</b></summary>
+<div>
+  
 - split(separator: " "): 공백을 기준으로 입력값을 나눠 배열에 저장
   
   ```swift
@@ -14,8 +17,13 @@
 - 중복 요소를 없애고 싶으면 배열 대신 집합(Set<형>) 사용
 - 나눗셈(몫) 계산할 때 소숫점 아래도 계산하고 싶으면 Double로 형변환
 - 배열 각 요소를 직접 수정하고 싶으면 a.map{$0/2}, for문처럼 사용하고 싶으면 a.forEach{print($0)}
+</div>
+</details>
 
-[Level 5]
+<details>
+<summary><b>Level 5</b></summary>
+<div>
+  
 - 문자열 a 가 있을 때, a.index는 문자열 a의 index
 - a.startIndex는 문자열 a의 첫번째 index 번호
   
@@ -61,8 +69,13 @@
   print(a.reversed())
   // 54321
   ```
+</div>
+</details>
 
-[Level 6]
+<details>
+<summary><b>Level 6</b></summary>
+<div>
+  
 - 별 그리는 문제는 한 번에 print 하려고 하지말고 영역을 나눠서 풀자, String(repeating:... 보다 한 변수에 추가해서 최소 횟수로 프린트하는 게 효율적
 - for 반복문
 
@@ -85,8 +98,13 @@
   print(d.keys.max()!) // 3
   print(d.values.max()!) // 4
   ```
+</div>
+</details>
 
-[Level 7]
+<details>
+<summary><b>Level 7</b></summary>
+<div>
+
 - 비어있는 2차원 배열 선언
   ```swift
    var a = [[Int]]()
@@ -110,3 +128,31 @@
   // 1 [2]
   ```
   파이썬의 pop처럼 제거된 요소를 프린트하거나 다른 변수에 넣을 수 있다.
+</div>
+</details>
+
+<details>
+<summary><b>Level 8</b></summary>
+<div>
+
+- ascii code 구하기
+  ```swift
+  print(Character("A").asciiValue)
+  // 65
+  ```
+- 제곱수 구하기
+  ```swift
+  import Foundation
+  pow(2, 3)
+  // 8 (밑 2, 승 3)
+  // 65
+  ```
+- 실수의 올림과 내림
+  ```swift
+  import Foundation
+  print(ceil(0.6)) // 1.0
+  print(floor(0.6)) // 0.0
+  // 65
+  ```
+</div>
+</details>
