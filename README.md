@@ -187,3 +187,33 @@
 </div>
 </details>
 
+<details>
+<summary><b>Level 13</b></summary>
+<div>
+
+- 원본을 오름차순으로 정렬
+  ```swift
+  var a = [5, 3, 1]
+  a.sort()
+  print(a) // [1, 3, 5]
+  ```
+- 사본을 만들어 오름차순으로 정렬
+  ```swift
+  var a = [5, 3, 1]
+  var b = a.sorted()
+  print(a, b) // [5, 3, 1] [1, 3, 5]
+  ```
+- 정렬 규칙 결정
+  ```swift
+  var a = [1, 3, 5]
+  a.sort(by: >)
+  print(a) // [5, 3, 1]
+  ```
+
+- 좌표형 (Int, Int), 좌표형을 요소로 가지고 있는 배열 [(Int, Int)]
+- 클로저를 사용한 sort
+  ```swift
+  b.sort(by: { $0.1 > $1.1 }) // y 좌표를 기준으로 내림차순
+  ```
+</div>
+</details>
