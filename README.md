@@ -217,3 +217,25 @@
   ```
 </div>
 </details>
+
+<details>
+<summary><b>Level 14</b></summary>
+<div>
+  
+- 배열의 요소 기반 탐색 시간은 O(n), 딕셔너리 요소 기반 탐색 시간은 일반적으로 O(1) (딕셔너리에서는 요소가 index인 셈)
+- 이진 탐색: 정렬된 배열에서 중간값을 기준으로 찾고자 하는 값과 동일하면 true, 작으면 시작~중간-1에 대해, 크면 중간+1~끝에 대해 재귀함수 호출
+- swift 문자열은 int형을 입력으로 받는 서브 스크립트가 정의되어 있지 않다 > index 형식이라는 걸로 변환 필요
+  ```swift
+  let a = "abcde"
+  print(a[String.Index(encodedOffset: 0)..<String.Index(encodedOffset: 2)]) // ab
+  print(a[a.index(a.startIndex, offsetBy: 0)..<a.index(a.startIndex, offsetBy: 2)]) // ab
+  print(a[a.firstIndex(of: "a")!..<a.firstIndex(of: "c")!]) // ab
+  ```
+- 배열을 딕셔너리로 재구성하기: uniqueKeysWithValues
+  ```swift
+  let a = ["i", "am", "hungry"]
+  let b = Dictionary(uniqueKeysWithValues: a.map{($0, false)}) // ["am": false, "hungry": false, "i": false]
+  let c = Dictionary(uniqueKeysWithValues: zip(a, 1...3)) // ["hungry": 3, "i": 1, "am": 2]
+  ```
+</div>
+</details>
