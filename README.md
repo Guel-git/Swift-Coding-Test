@@ -1,7 +1,7 @@
 ## 진저야 ~ 공부했음 끄적여 🫤
 
 <details>
-<summary><b>Level 4</b></summary>
+<summary><b>Level 4 - 1차원 배열</b></summary>
 <div>
   
 - split(separator: " "): 공백을 기준으로 입력값을 나눠 배열에 저장
@@ -21,7 +21,7 @@
 </details>
 
 <details>
-<summary><b>Level 5</b></summary>
+<summary><b>Level 5 - 문자열</b></summary>
 <div>
   
 - 문자열 a 가 있을 때, a.index는 문자열 a의 index
@@ -73,7 +73,7 @@
 </details>
 
 <details>
-<summary><b>Level 6</b></summary>
+<summary><b>Level 6 - 심화 1</b></summary>
 <div>
   
 - 별 그리는 문제는 한 번에 print 하려고 하지말고 영역을 나눠서 풀자, String(repeating:... 보다 한 변수에 추가해서 최소 횟수로 프린트하는 게 효율적
@@ -102,7 +102,7 @@
 </details>
 
 <details>
-<summary><b>Level 7</b></summary>
+<summary><b>Level 7 - 2차원 배열</b></summary>
 <div>
 
 - 비어있는 2차원 배열 선언
@@ -158,7 +158,7 @@
 </details>
 
 <details>
-<summary><b>Level 9</b></summary>
+<summary><b>Level 9 - 약수, 배수와 소수</b></summary>
 <div>
 
 - 반복문의 반복 횟수는 최.대.한 짧게 !
@@ -178,7 +178,7 @@
 </details>
 
 <details>
-<summary><b>Level 11</b></summary>
+<summary><b>Level 11 - 시간 복잡도</b></summary>
 <div>
 
 - n중 for문의 시간 복잡도는 시그마의 중첩으로 구하는 게 편하다 (식으로 나타내기)
@@ -188,7 +188,7 @@
 </details>
 
 <details>
-<summary><b>Level 13</b></summary>
+<summary><b>Level 13 - 	정렬</b></summary>
 <div>
 
 - 원본을 오름차순으로 정렬
@@ -219,7 +219,7 @@
 </details>
 
 <details>
-<summary><b>Level 14</b></summary>
+<summary><b>Level 14 - 집합과 맵</b></summary>
 <div>
   
 - 배열의 요소 기반 탐색 시간은 O(n), 딕셔너리 요소 기반 탐색 시간은 일반적으로 O(1) (딕셔너리에서는 요소가 index인 셈)
@@ -237,5 +237,66 @@
   let b = Dictionary(uniqueKeysWithValues: a.map{($0, false)}) // ["am": false, "hungry": false, "i": false]
   let c = Dictionary(uniqueKeysWithValues: zip(a, 1...3)) // ["hungry": 3, "i": 1, "am": 2]
   ```
+</div>
+</details>
+
+<details>
+<summary><b>Level 15 - 약수, 배수와 소수 2</b></summary>
+<div>
+  
+- 두 수의 최대공약수 구하는 방법
+  ```swift
+  func gcd(_ a:Int, _b:Int) -> Int {
+    if a % b == 0 {
+      return b
+    } else {
+      return gcd(b, a % b)
+    }
+  }
+  gcd(6, 8)
+  ```
+  ex) 6과 8 > 6 나누기 8 = 0...6 > 8 나누기 6 = 1...2 > 6 나누기 2 = 3...0 > 최대공약수는 2
+- 두 수의 최소공배수 구하는 방법
+  ```swift
+  func gcd(_ a:Int, _b:Int) -> Int {
+    if a % b == 0 {
+      return b
+    } else {
+      return gcd(b, a % b)
+    }
+  }
+  print(6 * 8 / gcd(6, 8)) // 24
+  ```
+- 소수인지 판별하는 방법 2가지
+  1) 1이 아닌 경우 2 ~ 루트(수) + 1 나누어 떨어지는 수가 있으면 소수가 아니고 없으면 소수이다
+     2 ~ 수 까지 돌지 않아도 되는 이유는 루트(수) + 1 이후에 나오는 숫자는 이미 앞에서 검사한 수와 짝을 이루는 약수이기 때문이다.
+     ```swift
+     import Foundation
+     func isPrime(_ n:Int) -> Bool {
+       if n < 2 { return false }
+       for i in 2..<Int(sqrt(Double(n)) + 1) {
+         if n % i == 0 { return false }
+       }
+       return true
+     }
+     ```
+  2) 소수의 배수는 소수가 아니므로 미리 제외시키는 방법
+     ```swift
+     import Foundation
+     func isPrime(_ n:Int) -> [Bool] {
+       var c = Array(repeating: true, count: n+1)
+       c[0] = false
+       c[1] = false
+       for i in 2..<Int(sqrt(Double(n))+1) {
+         if c[i] {
+           var j = 2
+           while i * j <= n {
+             c[i*j] = false
+             j += 1
+           }
+         }
+       }
+     }
+     ```
 </div>
 </details>
