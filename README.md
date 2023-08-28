@@ -300,3 +300,55 @@
      ```
 </div>
 </details>
+
+<details>
+<summary><b>Level 16 - 스택, 큐, 덱</b></summary>
+<div>
+  
+- 큐의 dequeue 시간 복잡도
+  큐에서 첫번째 요소를 뺄 때 removeFirst()를 사용할 수 있음 > 하지만 앞 요소를 빼고 나머지 요소들을 한 칸씩 땡겨야 하므로 O(n)의 시간이 필요함
+  
+  시간을 줄이는 방법 1) reversed()를 사용해 큐를 뒤집은 후 dropLast()를 한 후에 다시 reversed() 사용
+  ```swift
+  let a = [1, 2, 3]
+  let reversedA = a.reversed().dropLast().reversed()
+  print(reversedA) // [2, 3]
+  ```
+
+  시간을 줄이는 방법 2) pointer index를 이용해 큐의 시작점 위치 변경
+  이 방법은 간단하지만 구현이 은근 복잡하고 큐가 계속 늘어나는 문제가 있음
+  ```swift
+  let a = [1, 2, 3]
+  var i = 0
+  i += 1
+  print(a[i...]) // [2, 3]
+  ```
+  
+- if (a) && (b) 에서 조건 a, b 순서의 중요성
+  ```swift
+  let a = [1]
+  a.removeLast()
+  if !a.isEmpty && a[a.endIndex - 1] == 1 { } // (1)
+  if a[a.endIndex - 1] == 1 && !a.isEmpty { } // (2), index out of range error!
+  ```
+  (1)과 (2) 모두 동일한 조건문들로 구성되어 있지만
+  앞에서부터 조건을 판별한 후 escape 여부를 결정하기 때문에 (2)의 경우 index 값이 범위를 벗어났다는 에러가 발생한다.
+
+- 마지막 요소 제거하기: dropLast(), removeLast(), popLast()
+  dropLast()는 마지막 요소를 뺀 남은 요소들을 반환함 > 기존 배열에 직접 수정을 하지 않기 때문에 let으로 선언 가능
+  removeLast()는 기존 배열에서 마지막 요소를 제거 후 제거한 요소를 그대로 반환
+  popLast()는 제거한 마지막 요소를 옵셔널에 쌓아서 반환
+  따라서 빈 배열에 removeLast() 를 할 경우 컴파일 에러가 발생할 수 있으니 검사 후 사용 권장
+  ```swift
+  let a = [1, 2, 3, 4]
+  print(a.dropLast()) // [1, 2, 3]
+  print(a) // [1, 2, 3, 4]
+
+  var b = [1, 2, 3]
+  print(b.removeLast()) // 3
+  print(b) // [1, 2]
+  print(b.popLast()) // Optional(2)
+  print(b) // [1]
+  ```  
+</div>
+</details>
