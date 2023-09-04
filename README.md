@@ -1,7 +1,7 @@
 ## 진저야 ~ 공부했음 끄적여 🫤
 
 <details>
-<summary><b>Level 4 - 1차원 배열</b></summary>
+<summary><b>1차원 배열</b></summary>
 <div>
   
 - split(separator: " "): 공백을 기준으로 입력값을 나눠 배열에 저장
@@ -21,7 +21,7 @@
 </details>
 
 <details>
-<summary><b>Level 5 - 문자열</b></summary>
+<summary><b>문자열</b></summary>
 <div>
   
 - 문자열 a 가 있을 때, a.index는 문자열 a의 index
@@ -73,7 +73,7 @@
 </details>
 
 <details>
-<summary><b>Level 6 - 심화 1</b></summary>
+<summary><b>심화 1</b></summary>
 <div>
   
 - 별 그리는 문제는 한 번에 print 하려고 하지말고 영역을 나눠서 풀자, String(repeating:... 보다 한 변수에 추가해서 최소 횟수로 프린트하는 게 효율적
@@ -102,7 +102,7 @@
 </details>
 
 <details>
-<summary><b>Level 7 - 2차원 배열</b></summary>
+<summary><b>2차원 배열</b></summary>
 <div>
 
 - 비어있는 2차원 배열 선언
@@ -132,7 +132,7 @@
 </details>
 
 <details>
-<summary><b>Level 8</b></summary>
+<summary><b>일반 수학 1</b></summary>
 <div>
 
 - ascii code 구하기
@@ -158,7 +158,7 @@
 </details>
 
 <details>
-<summary><b>Level 9 - 약수, 배수와 소수</b></summary>
+<summary><b>약수, 배수와 소수</b></summary>
 <div>
 
 - 반복문의 반복 횟수는 최.대.한 짧게 !
@@ -178,7 +178,7 @@
 </details>
 
 <details>
-<summary><b>Level 11 - 시간 복잡도</b></summary>
+<summary><b>시간 복잡도</b></summary>
 <div>
 
 - n중 for문의 시간 복잡도는 시그마의 중첩으로 구하는 게 편하다 (식으로 나타내기)
@@ -188,7 +188,7 @@
 </details>
 
 <details>
-<summary><b>Level 13 - 	정렬</b></summary>
+<summary><b>정렬</b></summary>
 <div>
 
 - 원본을 오름차순으로 정렬
@@ -219,7 +219,7 @@
 </details>
 
 <details>
-<summary><b>Level 14 - 집합과 맵</b></summary>
+<summary><b>집합과 맵</b></summary>
 <div>
   
 - 배열의 요소 기반 탐색 시간은 O(n), 딕셔너리 요소 기반 탐색 시간은 일반적으로 O(1) (딕셔너리에서는 요소가 index인 셈)
@@ -241,7 +241,7 @@
 </details>
 
 <details>
-<summary><b>Level 15 - 약수, 배수와 소수 2</b></summary>
+<summary><b>약수, 배수와 소수 2</b></summary>
 <div>
   
 - 두 수의 최대공약수 구하는 방법
@@ -302,7 +302,7 @@
 </details>
 
 <details>
-<summary><b>Level 16 - 스택, 큐, 덱</b></summary>
+<summary><b>스택, 큐, 덱</b></summary>
 <div>
   
 - 큐의 dequeue 시간 복잡도
@@ -350,5 +350,76 @@
   print(b.popLast()) // Optional(2)
   print(b) // [1]
   ```  
+</div>
+</details>
+
+<details>
+<summary><b>BFS와 DFS</b></summary>
+<div>
+  
+- BFS (Breadth First Search)
+  너비 우선 탐색, start node로부터 depth를 기준으로 탐색
+  visited 와 willVisit 모두 Queue 로 구성
+  주로 a에서 b까지 가는 데 최소 일수 같은 걸 계산할 때 쓰임
+  ```swift
+  func bfs(_ start: Int, _ tree: [Int:[Int]]) -> [Int] {
+    var tree = tree
+    var visitedQueue: [Int] = []
+    var willVisitQueue: [Int] = [start]
+
+    while !willVisitQueue.isEmpty {
+      let node = willVisitQueue.removeFirst() // 시간 복잡도 고려 필요
+      if visitedQueue.contains(node) { continue }
+  
+      visitedQueue.append(node)
+      willVisitQueue += tree[node] ?? []
+    }
+
+    return visitedQueue
+  }
+  ```
+- DFS (Depth First Search)
+  깊이 우선 탐색, start node로부터 최하위 자식노드까지 깊이를 기준으로 탐색
+  visited 는 Queue, willVisit는 Stack
+  주로 서로 붙어있는 영역의 넓이를 찾는 등의 문제에서 사용
+  ```swift
+  func dfs(_ start: Int, _ tree: [Int:[Int]]) -> [Int] {
+    var tree = tree
+    var visitedQueue: [Int] = []
+    var willVisitStack: [Int] = [start]
+
+    while !willVisitStack.isEmpty {
+      let node = willVisitStack.removeLast()
+      if visitedQueue.contains(node) { continue }
+
+      visitedQueue.append(node)
+      willVisitStack += tree[node] ?? []
+    }
+
+    return visitedQueue
+  }
+  ```
+
+- 그래프에서 방향을 기준으로 서치해야 하는 경우, 좌표를 활용하는 게 좋음
+  위아래, 좌우, 앞뒤 를 기준으로 서치해야 하는 경우
+  ```swift
+  func bfs(_ start: (Int, Int, Int)) {
+    var visitedQueue: [(Int, Int, Int)] = []
+    var willVisitQueue: [(Int, Int, Int)] = [start]
+
+    while !willVisitQueue.isEmpty {
+      let node = willVisitQueue.removeFirst()
+      if visitedQueue.contains(node) { continue }
+
+      visitedQueue.append(node)
+      for i in [(1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, -1)] {
+        let nn = (node.0 + i.0, node.1 + i.1, node.2 + i.2)
+        if 필요한 조건 (0보다 크거나 같고, 마지막 인덱스보다 작은) {
+          willVisitQueue.append(tree[nn])
+        }
+      }
+    } 
+  }
+  ```
 </div>
 </details>
