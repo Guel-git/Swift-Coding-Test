@@ -439,3 +439,23 @@
   3. 재귀함수 종료 조건 구현
 </div>
 </details>
+
+<details>
+<summary><b>Backtracking</b></summary>
+<div>
+  
+- 브루트 포스로 모든 곳을 탐색하는 것이 아니라 어떤 조건을 만족하지 않으면, 방향을 바꿔 다른 곳을 탐색하는 알고리즘
+- 중요한 건 탐색 과정 중 return 할 수 있는 구간이 있으면 바로 return 해주는 것
+- 메소드 가장 상단에 return 하는 로직을 작성해서 해당 되면 밑에 쳐다보지도 말고 되돌아가기
+</div>
+</details>
+
+<details>
+<summary><b>Dynamic Programming</b></summary>
+<div>
+  
+- 몇 가지 경우에 대해 직접 계산해보고,
+- 거기서 규칙을 찾아낸 후, 식으로 표현하는 연습
+- 간혹 앞에 몇자리는 예외일 수 있으니 3~4개 이상 계산해보고 신중하게 규칙 찾기!
+</div>
+</details>
