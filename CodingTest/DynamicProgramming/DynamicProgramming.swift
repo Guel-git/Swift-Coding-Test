@@ -138,3 +138,30 @@
 //    print(max(dp[n-1][1], dp[n-1][2]))
 //}
 
+// 1463 번, Silver 3
+//let n = Int(readLine()!)!
+//var dp = Array(repeating: 1000001, count: n+1)
+//dp[0] = 0
+//dp[1] = 0
+//for i in 2..<dp.count {
+//    var tmp = [1+dp[i-1]]
+//    if i % 3 == 0 {
+//        tmp.append(1+dp[i/3])
+//    }
+//    if i % 2 == 0 {
+//        tmp.append(1+dp[i/2])
+//    }
+//    dp[i] = tmp.min()!
+//}
+//print(dp[n])
+
+// 9095 번, Silver 3
+//let n = Int(readLine()!)!
+//var dp = [0, 1, 2, 4, 0, 0, 0, 0, 0, 0, 0]
+//for i in 4..<11 {
+//    dp[i] = dp[i-1] + dp[i-2] + dp[i-3]
+//}
+//for _ in 0..<n {
+//    let a = Int(readLine()!)!
+//    print(dp[a])
+//}
