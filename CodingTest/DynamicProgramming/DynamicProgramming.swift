@@ -79,3 +79,62 @@
 //    }
 //}
 //print(r)
+
+// 1912 번, Silver 2
+//let n = Int(readLine()!)!
+//let arr = readLine()!.split(separator: " ").map{Int($0)!}
+//var dp = Array(repeating: -1001, count: 100000)
+//
+//dp[0] = arr[0]
+//
+//for i in 1..<n {
+//    dp[i] = max(arr[i], dp[i-1] + arr[i])
+//}
+//print(dp.max()!)
+
+// 1149 번, Silver 1
+// i번째 집까지의 최소 비용은 R: (i-1)번째의 G와 B의 최솟값 + i번째 비용, G: (i-1)번째의 R과 B의 최솟값 + i번째 비용, B: (i-1)번째의 R과 G의 최솟값 + i번째 비용
+//let n = Int(readLine()!)!
+//var dp = [[0, 0, 0]]
+//
+//for i in 1..<n+1 {
+//    let rgb = readLine()!.split(separator: " ").map{Int($0)!}
+//    dp.append([min(dp[i-1][1], dp[i-1][2]) + rgb[0], min(dp[i-1][0], dp[i-1][2]) + rgb[1], min(dp[i-1][0], dp[i-1][1]) + rgb[2]])
+//}
+//
+//print(dp[n].min()!)
+
+// 1932 번, Silver 1
+//let n = Int(readLine()!)!
+//var dp = [[Int(readLine()!)!]]
+//
+//for i in 1..<n {
+//    let row = readLine()!.split(separator: " ").map{Int($0)!}
+//    var tmpDP = [dp[i-1][0] + row[0]]
+//    for j in 1..<i {
+//        tmpDP.append(max(dp[i-1][j-1], dp[i-1][j]) + row[j])
+//    }
+//    tmpDP.append(dp[i-1][i-1] + row[i])
+//    dp.append(tmpDP)
+//}
+//print(dp[n-1].max()!)
+
+// 2579 번, Silver 3
+//let n = Int(readLine()!)!
+//var dp = [[Int]]()
+//var first = Int(readLine()!)!
+//if n == 1 {
+//    print(first)
+//} else if n == 2 {
+//    let second = Int(readLine()!)!
+//    print(first+second)
+//} else {
+//    let second = Int(readLine()!)!
+//    dp = [[0, first, first], [first, first+second, second]]
+//    for i in 2..<n {
+//        let a = Int(readLine()!)!
+//        dp.append([max(dp[i-1][1], dp[i-1][2]), dp[i-1][2] + a, max(dp[i-2][1], dp[i-2][2]) + a])
+//    }
+//    print(max(dp[n-1][1], dp[n-1][2]))
+//}
+

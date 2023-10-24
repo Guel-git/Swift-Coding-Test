@@ -192,3 +192,133 @@
 //        print(days)
 //    }
 //}
+
+// 24479 번, Silver 2
+// 1. 입력 정리
+//let VER = readLine()!.split(separator: " ").map{Int($0)!}
+//var tree = Dictionary(uniqueKeysWithValues: (1...VER[0]).map{($0, [Int]())})
+//for _ in 0..<VER[1] {
+//    let value = readLine()!.split(separator: " ").map{Int($0)!}
+//    tree[value[0]]!.append(value[1])
+//    tree[value[1]]!.append(value[0])
+//}
+//// 2. dfs 구현
+//func dfs(start: Int) -> Dictionary<Int, Int> {
+//    var visitedQueue = [Int:Int]()
+//    var willVisitStack: [Int] = [start]
+//    var count = 1
+//
+//    while !willVisitStack.isEmpty {
+//        let node = willVisitStack.removeLast()
+//        if visitedQueue[node] != nil { continue }
+//
+//        visitedQueue[node] = count
+//        count += 1
+//        willVisitStack += tree[node]!.sorted(by: >)
+//    }
+//
+//    return visitedQueue
+//}
+//
+//// 3. 결과 출력
+//let visitedQueue = dfs(start: VER[2])
+//for i in 1...VER[0] {
+//    print(visitedQueue[i] ?? 0)
+//}
+
+// 24480 번, Silver 2
+//let NLS = readLine()!.split(separator: " ").map{Int($0)!}
+//var tree = Dictionary(uniqueKeysWithValues: (1...NLS[0]).map{($0, [Int]())})
+//for _ in 0..<NLS[1] {
+//    let line = readLine()!.split(separator: " ").map{Int($0)!}
+//    tree[line[0]]!.append(line[1])
+//    tree[line[1]]!.append(line[0])
+//}
+//func dfs(_ start: Int) -> Dictionary<Int, Int> {
+//    var visitedQueue = [Int:Int]()
+//    var willVisitStack = [start]
+//    var count = 1
+//
+//    while !willVisitStack.isEmpty {
+//        let node = willVisitStack.removeLast()
+//        if visitedQueue[node] != nil { continue }
+//
+//        visitedQueue[node] = count
+//        count += 1
+//        willVisitStack += tree[node]!.sorted()
+//    }
+//
+//    return visitedQueue
+//}
+//let visitedQueue = dfs(NLS[2])
+//for i in 1...NLS[0] {
+//    print(visitedQueue[i] ?? 0)
+//}
+
+// 24444 번, Silver 2
+//let NLS = readLine()!.split(separator: " ").map{Int($0)!}
+//var tree = Dictionary(uniqueKeysWithValues: (1...NLS[0]).map{($0, [Int]())})
+//
+//for _ in 0..<NLS[1] {
+//    let line = readLine()!.split(separator: " ").map{Int($0)!}
+//    tree[line[0]]!.append(line[1])
+//    tree[line[1]]!.append(line[0])
+//}
+//
+//func bfs(_ start: Int) -> Dictionary<Int, Int> {
+//    var visitedQueue = [Int:Int]()
+//    var willVisitQueue = [start]
+//    var count = 1
+//    var index = 0
+//
+//    while willVisitQueue.count - 1 >= index {
+//        let node = willVisitQueue[index]
+//        index += 1
+//        if visitedQueue[node] != nil { continue }
+//
+//        visitedQueue[node] = count
+//        count += 1
+//        willVisitQueue += tree[node]!.sorted()
+//    }
+//
+//    return visitedQueue
+//}
+//
+//let visited = bfs(NLS[2])
+//for i in 1...NLS[0] {
+//    print(visited[i] ?? 0)
+//}
+
+// 24445 번, Silver 2
+//let NLS = readLine()!.split(separator: " ").map{Int($0)!}
+//var tree = Dictionary(uniqueKeysWithValues: (1...NLS[0]).map{($0, [Int]())})
+//
+//for _ in 0..<NLS[1] {
+//    let line = readLine()!.split(separator: " ").map{Int($0)!}
+//    tree[line[0]]!.append(line[1])
+//    tree[line[1]]!.append(line[0])
+//}
+//
+//func bfs(_ start: Int) -> Dictionary<Int, Int> {
+//    var visitedQueue = [Int:Int]()
+//    var willVisitQueue = [start]
+//    var count = 1
+//    var index = 0
+//    
+//    while willVisitQueue.count - 1 >= index {
+//        let node = willVisitQueue[index]
+//        index += 1
+//        if visitedQueue[node] != nil { continue }
+//        
+//        visitedQueue[node] = count
+//        count += 1
+//        willVisitQueue += tree[node]!.sorted(by: >)
+//    }
+//    
+//    return visitedQueue
+//}
+//
+//let visited = bfs(NLS[2])
+//for i in 1...NLS[0] {
+//    print(visited[i] ?? 0)
+//}
