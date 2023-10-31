@@ -165,3 +165,42 @@
 //    let a = Int(readLine()!)!
 //    print(dp[a])
 //}
+
+// 10844 번, Silver 1
+//let n = Int(readLine()!)!
+//var dp = Array(repeating: Array(repeating: 0, count: 10), count: n+1)
+//for i in 1..<10 { dp[1][i] = 1 }
+//for i in 2..<n+1 {
+//    for j in 0..<10 {
+//        if j == 0 {
+//            dp[i][0] = dp[i-1][1] % 1000000000
+//        } else if j == 9 {
+//            dp[i][9] = dp[i-1][8] % 1000000000
+//        } else {
+//            dp[i][j] = (dp[i-1][j-1] + dp[i-1][j+1]) % 1000000000
+//        }
+//    }
+//}
+//var sum = 0
+//for k in 0..<10 { sum += dp[n][k] }
+//print(sum % 1000000000)
+
+// 2775 번, Bronze 1
+//let t = Int(readLine()!)!
+//var dp = [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]]
+//for _ in 0..<t {
+//    let k = Int(readLine()!)!
+//    let b = Int(readLine()!)!
+//    if dp.count <= k {
+//        for i in dp.count...k {
+//            var tmp = Array(repeating: 0, count: 15)
+//            var sum = dp[i-1][0]
+//            for j in 1...14 {
+//                sum += dp[i-1][j]
+//                tmp[j] = sum
+//            }
+//            dp.append(tmp)
+//        }
+//    }
+//    print(dp[k][b])
+//}
