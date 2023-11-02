@@ -322,3 +322,60 @@
 //for i in 1...NLS[0] {
 //    print(visited[i] ?? 0)
 //}
+
+// 1697 번, Silver 1
+//struct Queue {
+//    var q = [Int]()
+//    
+//    mutating func push(_ item: Int) {
+//        q.append(item)
+//    }
+//    
+//    mutating func pop() -> Int {
+//        q.reverse()
+//        if let a = q.popLast() {
+//            q.reverse()
+//            return a
+//        }
+//        return 0
+//    }
+//    
+//    func isEmpty() -> Bool {
+//        return q.isEmpty
+//    }
+//}
+//
+//func bfs(_ s: Int, _ e: Int) -> Int {
+//    var queue = Queue()
+//    queue.push(s)
+//    
+//    while !queue.isEmpty() {
+//        let node = queue.pop()
+//        if node == e { break }
+//        
+//        if node > 0 && !visited[node-1] {
+//            queue.push(node-1)
+//            visited[node-1] = true
+//            depth[node-1] = depth[node] + 1
+//        }
+//        
+//        if node < 100000 && !visited[node+1] {
+//            queue.push(node+1)
+//            visited[node+1] = true
+//            depth[node+1] = depth[node] + 1
+//        }
+//        
+//        if node * 2 < 100001 && !visited[2*node] {
+//            queue.push(2*node)
+//            visited[2*node] = true
+//            depth[2*node] = depth[node] + 1
+//        }
+//    }
+//    return depth[k]
+//}
+//
+//let nk = readLine()!.split(separator: " ").map{Int($0)!}
+//let n = nk[0], k = nk[1]
+//var visited = Array(repeating: false, count: 100001)
+//var depth = Array(repeating: 0, count: 100001)
+//print(bfs(n, k))
