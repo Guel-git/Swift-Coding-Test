@@ -206,34 +206,34 @@
 //}
 
 // 9465 번, Silver 1
-let t = Int(readLine()!)!
-for _ in 0..<t {
-    let column = Int(readLine()!)!
-    var sticker = [[Int]]()
-    var dp = Array(repeating: Array(repeating: 0, count: column), count: 2)
-    for _ in 0..<2 {
-        let row = readLine()!.split(separator: " ").map{Int($0)!}
-        sticker.append(row)
-    }
-    
-    if column == 1 {
-        print(max(sticker[0][0], sticker[1][0]))
-        continue
-    }
-    
-    dp[0][0] = sticker[0][0]
-    dp[1][0] = sticker[1][0]
-    dp[0][1] = sticker[1][0] + sticker[0][1]
-    dp[1][1] = sticker[1][1] + sticker[0][0]
-    
-    if column == 2 {
-        print(max(dp[0][1], dp[1][1]))
-        continue
-    }
-    
-    for i in 2..<column {
-        dp[0][i] = sticker[0][i] + max(dp[1][i-1], dp[1][i-2])
-        dp[1][i] = sticker[1][i] + max(dp[0][i-1], dp[0][i-2])
-    }
-    print(max(dp[0][column-1], dp[1][column-1]))
-}
+//let t = Int(readLine()!)!
+//for _ in 0..<t {
+//    let column = Int(readLine()!)!
+//    var sticker = [[Int]]()
+//    var dp = Array(repeating: Array(repeating: 0, count: column), count: 2)
+//    for _ in 0..<2 {
+//        let row = readLine()!.split(separator: " ").map{Int($0)!}
+//        sticker.append(row)
+//    }
+//
+//    if column == 1 {
+//        print(max(sticker[0][0], sticker[1][0]))
+//        continue
+//    }
+//
+//    dp[0][0] = sticker[0][0]
+//    dp[1][0] = sticker[1][0]
+//    dp[0][1] = sticker[1][0] + sticker[0][1]
+//    dp[1][1] = sticker[1][1] + sticker[0][0]
+//
+//    if column == 2 {
+//        print(max(dp[0][1], dp[1][1]))
+//        continue
+//    }
+//
+//    for i in 2..<column {
+//        dp[0][i] = sticker[0][i] + max(dp[1][i-1], dp[1][i-2])
+//        dp[1][i] = sticker[1][i] + max(dp[0][i-1], dp[0][i-2])
+//    }
+//    print(max(dp[0][column-1], dp[1][column-1]))
+//}
