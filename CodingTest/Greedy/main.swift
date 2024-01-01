@@ -64,3 +64,41 @@
 //    sum -= list[i].contains("+") ? list[i].split(separator: "+").map{Int($0)!}.reduce(0, +) : Int(list[i])!
 //}
 //print(sum)
+
+// 20044 번, Silver 4
+//let num = Int(readLine()!)!
+//let arr = readLine()!.split(separator: " ").map{Int($0)!}
+//var sorted = arr.sorted()
+//var sumArr = [Int]()
+//for _ in 0..<num {
+//    let last = sorted.removeLast()
+//    sorted = sorted.reversed()
+//    let first = sorted.removeLast()
+//    sorted = sorted.reversed()
+//    sumArr.append(first + last)
+//}
+//print(sumArr.min()!)
+
+// 2891 번, Silver 5
+//let NSR = readLine()!.split(separator: " ").map{Int($0)!}
+//var ss = readLine()!.split(separator: " ").map{Int($0)!}.sorted()
+//let rr = readLine()!.split(separator: " ").map{Int($0)!}
+//var dic = Dictionary(uniqueKeysWithValues: (1...NSR[0]).map{($0, 0)})
+//var count = 0
+//for i in rr { dic[i] = 1 }
+//var ssCount = 0
+//for i in ss {
+//    if dic[i] == 1 {
+//        dic[i]! -= 1
+//        ss.remove(at: ssCount)
+//    } else {
+//        ssCount += 1
+//    }
+//}
+//for i in ss {
+//    if dic[i] == 1 { dic[i]! -= 1 }
+//    else if i > 1 && dic[i-1] == 1 { dic[i-1]! -= 1 }
+//    else if i < NSR[0] && dic[i+1] == 1 { dic[i+1]! -= 1 }
+//    else { count += 1 }
+//}
+//print(count)
