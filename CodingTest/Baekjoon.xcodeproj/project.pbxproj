@@ -23,7 +23,7 @@
 		52819EBD2AA5BA8E0006BD87 /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52819EBC2AA5BA8E0006BD87 /* Recursion.swift */; };
 		52819EE22AA9972F0006BD87 /* Backtracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52819EE12AA9972F0006BD87 /* Backtracking.swift */; };
 		52893C7E2AB9BEFE0027BAC3 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C7D2AB9BEFE0027BAC3 /* DynamicProgramming.swift */; };
-		52893C852ABC91CE0027BAC3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C842ABC91CE0027BAC3 /* main.swift */; };
+		52893C852ABC91CE0027BAC3 /* Greedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C842ABC91CE0027BAC3 /* Greedy.swift */; };
 		52893C882AC14ADB0027BAC3 /* DivideAndConquer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C872AC14ADB0027BAC3 /* DivideAndConquer.swift */; };
 		528DCD1A2AFFEEA400DD283A /* Silver4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DCD192AFFEEA400DD283A /* Silver4.swift */; };
 		52968BBF2B406A8200D20342 /* Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52968BBE2B406A8200D20342 /* Implementation.swift */; };
@@ -61,7 +61,7 @@
 		52819EBC2AA5BA8E0006BD87 /* Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recursion.swift; sourceTree = "<group>"; };
 		52819EE12AA9972F0006BD87 /* Backtracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backtracking.swift; sourceTree = "<group>"; };
 		52893C7D2AB9BEFE0027BAC3 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
-		52893C842ABC91CE0027BAC3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		52893C842ABC91CE0027BAC3 /* Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greedy.swift; sourceTree = "<group>"; };
 		52893C872AC14ADB0027BAC3 /* DivideAndConquer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideAndConquer.swift; sourceTree = "<group>"; };
 		528DCD192AFFEEA400DD283A /* Silver4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silver4.swift; sourceTree = "<group>"; };
 		52968BBE2B406A8200D20342 /* Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implementation.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		52893C832ABC91BE0027BAC3 /* Greedy */ = {
 			isa = PBXGroup;
 			children = (
-				52893C842ABC91CE0027BAC3 /* main.swift */,
+				52893C842ABC91CE0027BAC3 /* Greedy.swift */,
 			);
 			path = Greedy;
 			sourceTree = "<group>";
@@ -380,7 +380,7 @@
 				523F84412A7A56BE00BD5644 /* Level13.swift in Sources */,
 				523F84442A861AB000BD5644 /* Level14.swift in Sources */,
 				523F84502A9C88BD00BD5644 /* DFSBFS.swift in Sources */,
-				52893C852ABC91CE0027BAC3 /* main.swift in Sources */,
+				52893C852ABC91CE0027BAC3 /* Greedy.swift in Sources */,
 				528DCD1A2AFFEEA400DD283A /* Silver4.swift in Sources */,
 				52D0755C2A52A71F00B5C692 /* Level4.swift in Sources */,
 				5202D7132A60F3CA00F6E4DF /* Level7.swift in Sources */,

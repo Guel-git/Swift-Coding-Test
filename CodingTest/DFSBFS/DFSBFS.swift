@@ -379,3 +379,77 @@
 //var visited = Array(repeating: false, count: 100001)
 //var depth = Array(repeating: 0, count: 100001)
 //print(bfs(n, k))
+
+// 1012 번, Silver 2
+//let t = Int(readLine()!)!
+//var farm = [[Bool]]()
+//var M = 0, N = 0
+//for _ in 0..<t {
+//    let mnk = readLine()!.split(separator: " ").map{Int($0)!}
+//    M = mnk[0]
+//    N = mnk[1]
+//    farm = Array(repeating: Array(repeating: false, count: M), count: N)
+//    var count = 0
+//
+//    for _ in 0..<mnk[2] {
+//        let xy = readLine()!.split(separator: " ").map{Int($0)!}
+//        farm[xy[1]][xy[0]] = true
+//    }
+//
+//    for y in 0..<N {
+//        for x in 0..<M {
+//            if farm[y][x] {
+//                dfs(y, x)
+//                count += 1
+//            }
+//        }
+//    }
+//
+//    print(count)
+//}
+//
+//private func dfs(_ y: Int, _ x: Int) {
+//    if farm[y][x] {
+//        farm[y][x] = false
+//        for (dy, dx) in [(-1, 0), (1, 0), (0, 1), (0, -1)] {
+//            if 0 <= y+dy && y+dy < N && 0 <= x+dx && x+dx < M && farm[y+dy][x+dx] {
+//                dfs(y+dy, x+dx)
+//            }
+//        }
+//    }
+//}
+
+// 11274 번, Silver 2
+//let NM = readLine()!.split(separator: " ").map{Int($0)!}
+//var dic: [Int:[Int]] = Dictionary(uniqueKeysWithValues: (1...NM[0]).map{($0, [])})
+//var count = 0
+//for _ in 0..<NM[1] {
+//    let UV = readLine()!.split(separator: " ").map{Int($0)!}
+//    dic[UV[0]]?.append(UV[1])
+//    dic[UV[1]]?.append(UV[0])
+//}
+//for i in 1...NM[0] {
+//    if let dicI = dic[i] {
+//        if !dicI.isEmpty {
+//            dfs(i)
+//        }
+//        count += 1
+//    }
+//}
+//print(count)
+//private func dfs(_ s: Int) {
+//    var didVisit = [Int]()
+//    var willVisit: [Int] = [s]
+//
+//    while !willVisit.isEmpty {
+//        let node = willVisit.removeLast()
+//        if didVisit.contains(node) { continue }
+//
+//        didVisit.append(node)
+//        willVisit += dic[node] ?? []
+//    }
+//
+//    for node in didVisit {
+//        dic[node] = nil
+//    }
+//}
