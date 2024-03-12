@@ -46,3 +46,41 @@
 //    count += 1
 //}
 //print(count + w)
+
+// 14889 번, 스타트와 링크, Silver 1
+//let n = Int(readLine()!)!
+//var chosen = Array(repeating: false, count: n)
+//var result = Int.max
+//
+//var s = [[Int]]()
+//for _ in 0..<n {
+//    s.append(readLine()!.split(separator: " ").map{Int($0)!})
+//}
+//
+//private func dfs(_ chosenCount: Int, _ start: Int) {
+//    if chosenCount == n/2 {
+//        var team1 = 0, team2 = 0
+//        for i in 0..<n {
+//            for j in i+1..<n {
+//                if chosen[i] && chosen[j] {
+//                    team1 += s[i][j] + s[j][i]
+//                }
+//                if !chosen[i] && !chosen[j] {
+//                    team2 += s[i][j] + s[j][i]
+//                }
+//            }
+//        }
+//        result = min(result, abs(team1-team2))
+//        return
+//    }
+//    for i in start..<n {
+//        if !chosen[i] {
+//            chosen[i] = true
+//            dfs(chosenCount+1, i)
+//            chosen[i] = false
+//            if chosenCount + i == 0 { return }
+//        }
+//    }
+//}
+//dfs(0, 0)
+//print(result)
