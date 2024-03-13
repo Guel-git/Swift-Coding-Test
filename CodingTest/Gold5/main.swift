@@ -55,3 +55,55 @@
 //    }
 //}
 //print(result)
+
+// 15686 번, 치킨 배달, Gold5
+//var house = [(Int, Int)](), chickenNum = 0, map = [[Int]]()
+//let NM = readLine()!.split(separator: " ").map{Int($0)!}
+//for i in 0..<NM[0] {
+//    let row = readLine()!.split(separator: " ").map{Int($0)!}
+//    row.indices.forEach {
+//        if row[$0] == 1 { house.append((i, $0)) }
+//        if row[$0] == 2 { chickenNum += 1 }
+//    }
+//    map.append(row)
+//}
+//var distance: [Int: [Int]] = Dictionary(uniqueKeysWithValues: (1...chickenNum).map{($0, [])})
+//var start = 1
+//for i in 0..<NM[0] {
+//    for j in 0..<NM[0] {
+//        if map[i][j] == 2 {
+//            for (r, c) in house {
+//                let dis = abs(r-i) + abs(c-j)
+//                distance[start]?.append(dis)
+//            }
+//            start += 1
+//        }
+//    }
+//}
+//var visited = Array(repeating: false, count: chickenNum)
+//var result = [Int]()
+//private func dfs(_ chosenCount: Int, _ start: Int) {
+//    if chosenCount == NM[1] {
+//        var minSum = 0
+//        for j in 0..<house.count {
+//            var min = Int.max
+//            for i in 1...chickenNum {
+//                if visited[i-1] && min > distance[i]![j] {
+//                    min = distance[i]![j]
+//                }
+//            }
+//            minSum += min
+//        }
+//        result.append(minSum)
+//        return
+//    }
+//    for i in start..<chickenNum {
+//        if !visited[i] {
+//            visited[i] = true
+//            dfs(chosenCount+1, i)
+//            visited[i] = false
+//        }
+//    }
+//}
+//dfs(0, 0)
+//print(result.min()!)
