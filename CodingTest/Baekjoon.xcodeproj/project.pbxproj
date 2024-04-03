@@ -16,15 +16,15 @@
 		5229D2392A6A58B60045C48E /* Level10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5229D2382A6A58B60045C48E /* Level10.swift */; };
 		523F84412A7A56BE00BD5644 /* Level13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F84402A7A56BE00BD5644 /* Level13.swift */; };
 		523F84442A861AB000BD5644 /* Level14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F84432A861AB000BD5644 /* Level14.swift */; };
-		523F84472A8A02EC00BD5644 /* SortAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F84462A8A02EC00BD5644 /* SortAlgorithm.swift */; };
+		523F84472A8A02EC00BD5644 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F84462A8A02EC00BD5644 /* Sorting.swift */; };
 		523F844A2A8F674A00BD5644 /* Level15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F84492A8F674A00BD5644 /* Level15.swift */; };
 		523F844D2A9949AD00BD5644 /* Level16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F844C2A9949AD00BD5644 /* Level16.swift */; };
 		523F84502A9C88BD00BD5644 /* DFSBFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F844F2A9C88BD00BD5644 /* DFSBFS.swift */; };
-		5275B52C2B83A1E500FAC920 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275B52B2B83A1E500FAC920 /* main.swift */; };
+		5275B52C2B83A1E500FAC920 /* Silver1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275B52B2B83A1E500FAC920 /* Silver1.swift */; };
 		5275B5322BA14EAC00FAC920 /* Gold5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5275B5312BA14EAC00FAC920 /* Gold5.swift */; };
 		52819EBD2AA5BA8E0006BD87 /* Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52819EBC2AA5BA8E0006BD87 /* Recursion.swift */; };
 		52819EE22AA9972F0006BD87 /* Backtracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52819EE12AA9972F0006BD87 /* Backtracking.swift */; };
-		52893C7E2AB9BEFE0027BAC3 /* DynamicProgramming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C7D2AB9BEFE0027BAC3 /* DynamicProgramming.swift */; };
+		52893C7E2AB9BEFE0027BAC3 /* DP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C7D2AB9BEFE0027BAC3 /* DP.swift */; };
 		52893C852ABC91CE0027BAC3 /* Greedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C842ABC91CE0027BAC3 /* Greedy.swift */; };
 		52893C882AC14ADB0027BAC3 /* DivideAndConquer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C872AC14ADB0027BAC3 /* DivideAndConquer.swift */; };
 		528DCD1A2AFFEEA400DD283A /* Silver4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DCD192AFFEEA400DD283A /* Silver4.swift */; };
@@ -56,15 +56,15 @@
 		5229D2382A6A58B60045C48E /* Level10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level10.swift; sourceTree = "<group>"; };
 		523F84402A7A56BE00BD5644 /* Level13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level13.swift; sourceTree = "<group>"; };
 		523F84432A861AB000BD5644 /* Level14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level14.swift; sourceTree = "<group>"; };
-		523F84462A8A02EC00BD5644 /* SortAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortAlgorithm.swift; sourceTree = "<group>"; };
+		523F84462A8A02EC00BD5644 /* Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
 		523F84492A8F674A00BD5644 /* Level15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level15.swift; sourceTree = "<group>"; };
 		523F844C2A9949AD00BD5644 /* Level16.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level16.swift; sourceTree = "<group>"; };
 		523F844F2A9C88BD00BD5644 /* DFSBFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFSBFS.swift; sourceTree = "<group>"; };
-		5275B52B2B83A1E500FAC920 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5275B52B2B83A1E500FAC920 /* Silver1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silver1.swift; sourceTree = "<group>"; };
 		5275B5312BA14EAC00FAC920 /* Gold5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gold5.swift; sourceTree = "<group>"; };
 		52819EBC2AA5BA8E0006BD87 /* Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recursion.swift; sourceTree = "<group>"; };
 		52819EE12AA9972F0006BD87 /* Backtracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backtracking.swift; sourceTree = "<group>"; };
-		52893C7D2AB9BEFE0027BAC3 /* DynamicProgramming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicProgramming.swift; sourceTree = "<group>"; };
+		52893C7D2AB9BEFE0027BAC3 /* DP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DP.swift; sourceTree = "<group>"; };
 		52893C842ABC91CE0027BAC3 /* Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greedy.swift; sourceTree = "<group>"; };
 		52893C872AC14ADB0027BAC3 /* DivideAndConquer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideAndConquer.swift; sourceTree = "<group>"; };
 		528DCD192AFFEEA400DD283A /* Silver4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silver4.swift; sourceTree = "<group>"; };
@@ -100,6 +100,77 @@
 				5202D7152A6131E900F6E4DF /* Level8.swift */,
 			);
 			path = Level8;
+			sourceTree = "<group>";
+		};
+		520EFE912BBDA350005871C6 /* Baekjoon */ = {
+			isa = PBXGroup;
+			children = (
+				520EFE942BBDA3C3005871C6 /* Algorithm */,
+				520EFE932BBDA3B0005871C6 /* Tier */,
+				520EFE922BBDA392005871C6 /* Level */,
+			);
+			path = Baekjoon;
+			sourceTree = "<group>";
+		};
+		520EFE922BBDA392005871C6 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				523F844B2A9949A100BD5644 /* Level16 */,
+				523F84482A8F673F00BD5644 /* Level15 */,
+				523F84452A8A02DA00BD5644 /* Sorting */,
+				523F84422A861AA300BD5644 /* Level14 */,
+				523F843F2A7A56B200BD5644 /* Level13 */,
+				5219AB3D2A724936006E7FE8 /* Level12 */,
+				5219AB3A2A712C94006E7FE8 /* Level11 */,
+				5229D2372A6A58AC0045C48E /* Level10 */,
+				5229D2342A691A480045C48E /* Level9 */,
+				5202D7142A6131CB00F6E4DF /* Level8 */,
+				5202D7112A60F3AB00F6E4DF /* Level7 */,
+				52D1404F2A5EA552006DCFA0 /* Level6 */,
+				52D075682A544A6600B5C692 /* Level5 */,
+				52D0755A2A52A71F00B5C692 /* Level4 */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
+		520EFE932BBDA3B0005871C6 /* Tier */ = {
+			isa = PBXGroup;
+			children = (
+				528DCD182AFFEE9700DD283A /* Silver4 */,
+				5275B5302BA14EA100FAC920 /* Gold5 */,
+				5275B52A2B83A1CF00FAC920 /* Silver1 */,
+			);
+			path = Tier;
+			sourceTree = "<group>";
+		};
+		520EFE942BBDA3C3005871C6 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				52968BBD2B406A5B00D20342 /* Implementation */,
+				52E873DA2AE0329F00662723 /* PriorityQueue */,
+				52893C862AC14AC50027BAC3 /* DivideAndConquer */,
+				52893C832ABC91BE0027BAC3 /* Greedy */,
+				52893C7C2AB9BED90027BAC3 /* DP */,
+				52819EE02AA997230006BD87 /* Backtracking */,
+				52819EBB2AA5BA740006BD87 /* Recursion */,
+				523F844E2A9C884B00BD5644 /* DFSBFS */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		520EFE952BBDA3D3005871C6 /* Programmers */ = {
+			isa = PBXGroup;
+			children = (
+				520EFE962BBDA3DC005871C6 /* Level2 */,
+			);
+			path = Programmers;
+			sourceTree = "<group>";
+		};
+		520EFE962BBDA3DC005871C6 /* Level2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Level2;
 			sourceTree = "<group>";
 		};
 		5219AB3A2A712C94006E7FE8 /* Level11 */ = {
@@ -150,12 +221,12 @@
 			path = Level14;
 			sourceTree = "<group>";
 		};
-		523F84452A8A02DA00BD5644 /* SortAlgorithm */ = {
+		523F84452A8A02DA00BD5644 /* Sorting */ = {
 			isa = PBXGroup;
 			children = (
-				523F84462A8A02EC00BD5644 /* SortAlgorithm.swift */,
+				523F84462A8A02EC00BD5644 /* Sorting.swift */,
 			);
-			path = SortAlgorithm;
+			path = Sorting;
 			sourceTree = "<group>";
 		};
 		523F84482A8F673F00BD5644 /* Level15 */ = {
@@ -185,7 +256,7 @@
 		5275B52A2B83A1CF00FAC920 /* Silver1 */ = {
 			isa = PBXGroup;
 			children = (
-				5275B52B2B83A1E500FAC920 /* main.swift */,
+				5275B52B2B83A1E500FAC920 /* Silver1.swift */,
 			);
 			path = Silver1;
 			sourceTree = "<group>";
@@ -214,12 +285,12 @@
 			path = Backtracking;
 			sourceTree = "<group>";
 		};
-		52893C7C2AB9BED90027BAC3 /* DynamicProgramming */ = {
+		52893C7C2AB9BED90027BAC3 /* DP */ = {
 			isa = PBXGroup;
 			children = (
-				52893C7D2AB9BEFE0027BAC3 /* DynamicProgramming.swift */,
+				52893C7D2AB9BEFE0027BAC3 /* DP.swift */,
 			);
-			path = DynamicProgramming;
+			path = DP;
 			sourceTree = "<group>";
 		};
 		52893C832ABC91BE0027BAC3 /* Greedy */ = {
@@ -257,31 +328,8 @@
 		52D0754F2A52A71F00B5C692 = {
 			isa = PBXGroup;
 			children = (
-				5275B5302BA14EA100FAC920 /* Gold5 */,
-				5275B52A2B83A1CF00FAC920 /* Silver1 */,
-				52968BBD2B406A5B00D20342 /* Implementation */,
-				528DCD182AFFEE9700DD283A /* Silver4 */,
-				52E873DA2AE0329F00662723 /* PriorityQueue */,
-				52893C862AC14AC50027BAC3 /* DivideAndConquer */,
-				52893C832ABC91BE0027BAC3 /* Greedy */,
-				52893C7C2AB9BED90027BAC3 /* DynamicProgramming */,
-				52819EE02AA997230006BD87 /* Backtracking */,
-				52819EBB2AA5BA740006BD87 /* Recursion */,
-				523F844E2A9C884B00BD5644 /* DFSBFS */,
-				523F844B2A9949A100BD5644 /* Level16 */,
-				523F84482A8F673F00BD5644 /* Level15 */,
-				523F84452A8A02DA00BD5644 /* SortAlgorithm */,
-				523F84422A861AA300BD5644 /* Level14 */,
-				523F843F2A7A56B200BD5644 /* Level13 */,
-				5219AB3D2A724936006E7FE8 /* Level12 */,
-				5219AB3A2A712C94006E7FE8 /* Level11 */,
-				5229D2372A6A58AC0045C48E /* Level10 */,
-				5229D2342A691A480045C48E /* Level9 */,
-				5202D7142A6131CB00F6E4DF /* Level8 */,
-				5202D7112A60F3AB00F6E4DF /* Level7 */,
-				52D1404F2A5EA552006DCFA0 /* Level6 */,
-				52D075682A544A6600B5C692 /* Level5 */,
-				52D0755A2A52A71F00B5C692 /* Level4 */,
+				520EFE952BBDA3D3005871C6 /* Programmers */,
+				520EFE912BBDA350005871C6 /* Baekjoon */,
 				52D075592A52A71F00B5C692 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -386,12 +434,12 @@
 			files = (
 				5214C9A82A544B1700AD09A0 /* Level5.swift in Sources */,
 				523F844A2A8F674A00BD5644 /* Level15.swift in Sources */,
-				5275B52C2B83A1E500FAC920 /* main.swift in Sources */,
+				5275B52C2B83A1E500FAC920 /* Silver1.swift in Sources */,
 				52968BBF2B406A8200D20342 /* Implementation.swift in Sources */,
-				52893C7E2AB9BEFE0027BAC3 /* DynamicProgramming.swift in Sources */,
+				52893C7E2AB9BEFE0027BAC3 /* DP.swift in Sources */,
 				52819EE22AA9972F0006BD87 /* Backtracking.swift in Sources */,
 				5229D2392A6A58B60045C48E /* Level10.swift in Sources */,
-				523F84472A8A02EC00BD5644 /* SortAlgorithm.swift in Sources */,
+				523F84472A8A02EC00BD5644 /* Sorting.swift in Sources */,
 				52893C882AC14ADB0027BAC3 /* DivideAndConquer.swift in Sources */,
 				52819EBD2AA5BA8E0006BD87 /* Recursion.swift in Sources */,
 				52E873DC2AE032CE00662723 /* PriorityQueue.swift in Sources */,
