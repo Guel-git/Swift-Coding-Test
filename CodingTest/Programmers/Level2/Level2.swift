@@ -132,3 +132,19 @@
 //    }
 //    return -1
 //}
+
+// MARK: - JadenCase 문자열 만들기, 2024.04.04
+// MARK: - Character("A").asciiValue! -> 문자로 아스키코드 찾기, String(UnicodeScalar(64)) -> 아스키코드로 문자 찾기
+//func solution(_ s:String) -> String {
+//    var isStart = true, newWord = String()
+//    for i in s {
+//        if isStart && i != " " {
+//            isStart = false
+//            newWord += i.asciiValue! >= 97 && i.asciiValue! <= 122 ? String(UnicodeScalar(i.asciiValue! - 32)) : String(i)
+//        } else {
+//            if i == " " { isStart = true }
+//            newWord += String(i).lowercased()
+//        }
+//    }
+//    return newWord
+//}
