@@ -90,3 +90,45 @@
 //
 //    return result
 //}
+
+// MARK: - 미로 탈출, 2024.04.04
+// MARK: - bfs를 이용해서 풀이, 몇 depth인지 파악하는 부분이 관건 / 처음에는 levelArray라는 배열을 만들어서 같은 층의 모든 노드를 방문할 때마다 count를 하나씩 올림
+// MARK: - 하지만 시간 초과 발생 -> 단순하게 접근하자 ! visited 배열을 선언하듯 distance 배열을 선언하여 떨어진 거리 값을 모두 저장
+//import Foundation
+//
+//var map = [[String]]()
+//func solution(_ maps:[String]) -> Int {
+//    map = maps.map {Array($0).map{String($0)}}
+//    var s = (100, 100), l = (100, 100)
+//    for i in 0..<map.count {
+//        for j in 0..<map[i].count {
+//            if map[i][j] == "S" { s = (i, j) }
+//            if map[i][j] == "L" { l = (i, j) }
+//        }
+//    }
+//
+//    let stoL = bfs(s, "L"), ltoE = bfs(l, "E")
+//    if stoL == -1 || ltoE == -1 { return -1 }
+//
+//    return stoL + ltoE
+//}
+//
+//func bfs(_ s: (Int, Int), _ e: String) -> Int {
+//    var willVisit = [s], distance = Array(repeating: Array(repeating: -1, count: map[0].count), count: map.count)
+//    distance[s.0][s.1] = 0
+//    while !willVisit.isEmpty {
+//        let node: (Int, Int) = willVisit.removeFirst()
+//
+//        for (x, y) in [(0, 1), (-1, 0), (0, -1), (1, 0)] {
+//            let nx = node.0 + x, ny = node.1 + y
+//            if nx >= 0 && nx < map.count && ny >= 0 && ny < map[0].count && map[nx][ny] != "X" && distance[nx][ny] == -1 {
+//                if map[nx][ny] == e {
+//                    return distance[node.0][node.1] + 1
+//                }
+//                willVisit.append((nx, ny))
+//                distance[nx][ny] = distance[node.0][node.1] + 1
+//            }
+//        }
+//    }
+//    return -1
+//}
