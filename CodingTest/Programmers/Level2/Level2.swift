@@ -274,3 +274,26 @@
 //    }
 //    return Int64(count * 4)
 //}
+
+// MARK: - 할인 행사, 2024.04.05
+// MARK: - 이중 포문을 피하기 위해 10칸을 담을 수 있는 윈도우를 한 칸씩 옮기는 아이디어로 접근
+// MARK: - 딕셔너리 간의 비교는 일반적으로 O(n)이다. dict[key, default: 0] += 1 -> 키 값 생성됨과 동시에 +1을 해줘서 첫 value는 1이다
+//import Foundation
+//
+//func solution(_ want:[String], _ number:[Int], _ discount:[String]) -> Int {
+//    var wantDict = Dictionary(uniqueKeysWithValues: (0..<want.count).map{(want[$0], number[$0])})
+//    var discountDict = [String:Int](), count = 0
+//    for i in 0..<10 {
+//        discountDict[discount[i], default: 0] += 1
+//    }
+//    if discountDict == wantDict { count += 1}
+//    for i in 10..<discount.count {
+//        discountDict[discount[i-10]]! -= 1
+//        if discountDict[discount[i-10]] == 0 {
+//            discountDict.removeValue(forKey: discount[i-10])
+//        }
+//        discountDict[discount[i], default: 0] += 1
+//        if discountDict == wantDict { count += 1 }
+//    }
+//    return count
+//}
