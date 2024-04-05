@@ -32,7 +32,6 @@
 //    return count
 //}
 
-
 // MARK: - 혼자서 하는 틱택토, 2024.04.03
 //import Foundation
 //
@@ -327,11 +326,11 @@
 //    var willVisit: [(Int, Int)] = [(i, j)]
 //    var visited = Array(repeating: Array(repeating: false, count: wc), count: hc)
 //    var count = 0
-//    
+//
 //    while !willVisit.isEmpty {
 //        let node = willVisit.removeLast()
 //        if visited[node.0][node.1] { continue }
-//        
+//
 //        for (x, y) in [(1, 0), (-1, 0), (0, 1), (0, -1)] {
 //            if 0 <= node.0 + x && node.0 + x < hc && 0 <= node.1 + y && node.1 + y < wc && map[node.0 + x][node.1 + y] != "X" {
 //                willVisit.append((node.0 + x, node.1 + y))
@@ -341,6 +340,27 @@
 //        count += Int(map[node.0][node.1])!
 //        map[node.0][node.1] = "X"
 //    }
-//                        
+//
 //    return count
+//}
+
+// MARK: - 시소 짝꿍, 2024.04.05
+// MARK: - 솔직히 이런 문제 나오면 풀 자신이 .. 없다..
+// MARK: - 중첩 포문을 돌지 않도록 먼저 요소들의 개수를 딕셔너리로 저장
+// 1:1, 2:1, 4:3, 3:2 인 다른 key가 있다면 value를 곱해서 짝꿍의 수를 구한다
+//import Foundation
+//
+//func solution(_ weights: [Int]) -> Int64 {
+//    var answer = 0, dict = [Double:Int]()
+//    for w in weights {
+//        dict[Double(w), default: 0] += 1
+//    }
+//
+//    for i in dict.keys {
+//        answer += dict[i]! * (dict[i]! - 1) / 2
+//        answer += dict[i]! * (dict[i * 3 / 2] ?? 0)
+//        answer += dict[i]! * (dict[i * 2] ?? 0)
+//        answer += dict[i]! * (dict[i * 4 / 3] ?? 0)
+//    }
+//    return Int64(answer)
 //}
