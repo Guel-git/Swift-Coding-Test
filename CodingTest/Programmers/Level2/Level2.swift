@@ -219,3 +219,43 @@
 //
 //    return count
 //}
+
+// MARK: - 과제 진행하기, 2024.04.05
+// MARK: - 시간을 비교하거나 더하는 연산이 필요하다면 가장 단위가 작은 값으로 변환해서 계산을 용이하게 하기
+// MARK: - 고차함수 클로저의 경우 클로저 내에 연산이 많아질 경우, 파라미터 -> 리턴 값 in 형태로 접근해야 함
+// MARK: - 구현 함수의 경우, 식이 길어지고 분기 처리가 많으며 배열 인덱스를 다루는 경우가 많기 때문에 높은 집중력과 좋은 컨디션이 필요하다 !
+//import Foundation
+//
+//func solution(_ plans:[[String]]) -> [String] {
+//    var plans = plans.map { item -> [String] in
+//        let time = item[1].split(separator: ":").map{Int($0)!}
+//        return [item[0], String(time[0] * 60 + time[1]), item[2]]
+//    }
+//    plans = plans.sorted(by: { Int($0[1])! < Int($1[1])! })
+//
+//    var post = [[String]](), done = [String]()
+//    for i in 0..<plans.count-1 {
+//        let thisEndTime = Int(plans[i][1])! + Int(plans[i][2])!, nextStartTime = Int(plans[i+1][1])!
+//        if thisEndTime > nextStartTime {
+//            post.append([plans[i][0], String(thisEndTime - nextStartTime)])
+//        } else if thisEndTime < nextStartTime {
+//            done.append(plans[i][0])
+//            var leftTime = nextStartTime - thisEndTime
+//            while leftTime > 0 && !post.isEmpty {
+//                var last = post.removeLast()
+//                if Int(last[1])! > leftTime {
+//                    post.append([last[0], String(Int(last[1])! - leftTime)])
+//                    break
+//                }
+//                done.append(last[0])
+//                leftTime -= Int(last[1])!
+//            }
+//        } else {
+//            done.append(plans[i][0])
+//        }
+//    }
+//
+//    done.append(plans[plans.index(before: plans.endIndex)][0])
+//    post.reversed().forEach { done.append($0[0]) }
+//    return done
+//}
