@@ -259,3 +259,18 @@
 //    post.reversed().forEach { done.append($0[0]) }
 //    return done
 //}
+
+// MARK: - 두 원 사이의 정수쌍, 2024.04.05
+// MARK: - 이중 포문이면 일단 안된다고 생각하자,, 수학 문제는 수식을 뽑아내고 이걸 최대한 활용하자 (여기서는 x와 반지름을 아니까 y^2 = r^2 - x^2 활용)
+// MARK: - ceil은 소수 부분 올림 floor는 소수 부분 버림
+//import Foundation
+//
+//func solution(_ r1:Int, _ r2:Int) -> Int64 {
+//    var count = 0
+//    for i in 1...r2 {
+//        let min = ceil(sqrt(max(Double(r1*r1 - i*i), 0)))
+//        let max = floor(sqrt(Double(r2*r2 - i*i)))
+//        count += Int(max - min + 1)
+//    }
+//    return Int64(count * 4)
+//}
