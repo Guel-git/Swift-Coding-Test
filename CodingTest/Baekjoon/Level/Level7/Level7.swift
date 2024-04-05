@@ -89,3 +89,51 @@ import Foundation
 //    }
 //}
 //print(a.flatMap{ $0 }.filter{ $0 == 1 }.count)
+
+// MARK: - 귤 고르기, 2024.04.05
+// MARK: - 2n의 시간 복잡도
+//import Foundation
+//
+//func solution(_ k:Int, _ tangerine:[Int]) -> Int {
+//    var countDict = [Int:Int](), k = k, count = 0
+//    for t in tangerine {
+//        if countDict[t] == nil {
+//            countDict[t] = 1
+//        } else {
+//            countDict[t]! += 1
+//        }
+//    }
+//    let countArray = countDict.map {[$0.key, $0.value]}.sorted(by: { $0[1] > $1[1] })
+//    for c in countArray {
+//        count += 1
+//        if c[1] >= k { return count }
+//        k -= c[1]
+//    }
+//    return count
+//}
+
+// MARK: - 이진 변환 반복하기, 2024.04.05
+// MARK: - 십진수 -> 이진수 변환 방법 기억하기
+
+//import Foundation
+//
+//func solution(_ s:String) -> [Int] {
+//    var newS = s, deleted = Int(), count = 0
+//    while newS != "1" {
+//        var leftLength = newS.filter{$0=="1"}.count, leftArray = [Int]()
+//        deleted += newS.count - leftLength
+//
+//        while leftLength / 2 > 0 {
+//            leftArray.append(leftLength%2)
+//            leftLength = leftLength / 2
+//        }
+//        leftArray.append(leftLength%2)
+//
+//        leftArray = leftArray.reversed()
+//        let stringArray = leftArray.map{String($0)}
+//        newS = stringArray.joined()
+//        count += 1
+//    }
+//
+//    return [count, deleted]
+//}
