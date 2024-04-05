@@ -148,3 +148,74 @@
 //    }
 //    return newWord
 //}
+
+// MARK: - 귤 고르기, 2024.04.05
+// MARK: - 2n의 시간 복잡도
+//import Foundation
+//
+//func solution(_ k:Int, _ tangerine:[Int]) -> Int {
+//    var countDict = [Int:Int](), k = k, count = 0
+//    for t in tangerine {
+//        if countDict[t] == nil {
+//            countDict[t] = 1
+//        } else {
+//            countDict[t]! += 1
+//        }
+//    }
+//    let countArray = countDict.map {[$0.key, $0.value]}.sorted(by: { $0[1] > $1[1] })
+//    for c in countArray {
+//        count += 1
+//        if c[1] >= k { return count }
+//        k -= c[1]
+//    }
+//    return count
+//}
+
+// MARK: - 이진 변환 반복하기, 2024.04.05
+// MARK: - 십진수 -> 이진수 변환 방법 기억하기
+//import Foundation
+//
+//func solution(_ s:String) -> [Int] {
+//    var newS = s, deleted = Int(), count = 0
+//    while newS != "1" {
+//        var leftLength = newS.filter{$0=="1"}.count, leftArray = [Int]()
+//        deleted += newS.count - leftLength
+//
+//        while leftLength / 2 > 0 {
+//            leftArray.append(leftLength%2)
+//            leftLength = leftLength / 2
+//        }
+//        leftArray.append(leftLength%2)
+//
+//        leftArray = leftArray.reversed()
+//        let stringArray = leftArray.map{String($0)}
+//        newS = stringArray.joined()
+//        count += 1
+//    }
+//
+//    return [count, deleted]
+//}
+
+// MARK: - 롤케이크 자르기, 2024.04.05
+// MARK: - 딕셔너리에서 key가 없어도 key를 생성하는 동시에 default 값을 지정해줄 수 있음(== nil 가 더이상 필요 X) -> dict[key, default: 0] += 1
+// MARK: - Set(Array)는 모든 요소를 확인해야 하므로 시간복잡도는 O(n) -> 너무 남용하지 말기..
+//import Foundation
+//
+//func solution(_ topping:[Int]) -> Int {
+//    var leftTopping = [Int: Int](), rightTopping = [Int: Int](), count = 0
+//
+//    topping.forEach { rightTopping[$0, default: 0] += 1 }
+//
+//    for t in topping {
+//        rightTopping[t]! -= 1
+//        if rightTopping[t]! == 0 {
+//            rightTopping.removeValue(forKey: t)
+//        }
+//
+//        leftTopping[t, default: 0] += 1
+//
+//        if leftTopping.count == rightTopping.count { count += 1 }
+//    }
+//
+//    return count
+//}
