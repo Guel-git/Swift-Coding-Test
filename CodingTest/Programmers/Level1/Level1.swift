@@ -25,3 +25,17 @@
 //    }
 //    return sum
 //}
+
+// MARK: - 과일 장수, 2024.07.03
+// MARK: - 내림차순 정렬 -> 박스별로 마지막(가장 작은) 숫자만 확인 후 계산
+//import Foundation
+//
+//func solution(_ k:Int, _ m:Int, _ score:[Int]) -> Int {
+//    let ns = score.sorted { return $0 > $1 }
+//    var i = 1, sum = 0
+//    while m * i - 1 < ns.count {
+//        sum += ns[m*i-1] * m
+//        i += 1
+//    }
+//    return sum
+//}
