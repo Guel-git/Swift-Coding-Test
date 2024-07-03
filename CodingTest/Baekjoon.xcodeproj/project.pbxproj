@@ -28,6 +28,7 @@
 		52893C7E2AB9BEFE0027BAC3 /* DP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C7D2AB9BEFE0027BAC3 /* DP.swift */; };
 		52893C852ABC91CE0027BAC3 /* Greedy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C842ABC91CE0027BAC3 /* Greedy.swift */; };
 		52893C882AC14ADB0027BAC3 /* DivideAndConquer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52893C872AC14ADB0027BAC3 /* DivideAndConquer.swift */; };
+		528AF8822C355E8800E4EFC2 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528AF8812C355E8800E4EFC2 /* Level1.swift */; };
 		528DCD1A2AFFEEA400DD283A /* Silver4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528DCD192AFFEEA400DD283A /* Silver4.swift */; };
 		52968BBF2B406A8200D20342 /* Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52968BBE2B406A8200D20342 /* Implementation.swift */; };
 		52D0755C2A52A71F00B5C692 /* Level4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0755B2A52A71F00B5C692 /* Level4.swift */; };
@@ -69,6 +70,7 @@
 		52893C7D2AB9BEFE0027BAC3 /* DP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DP.swift; sourceTree = "<group>"; };
 		52893C842ABC91CE0027BAC3 /* Greedy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greedy.swift; sourceTree = "<group>"; };
 		52893C872AC14ADB0027BAC3 /* DivideAndConquer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideAndConquer.swift; sourceTree = "<group>"; };
+		528AF8812C355E8800E4EFC2 /* Level1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		528DCD192AFFEEA400DD283A /* Silver4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silver4.swift; sourceTree = "<group>"; };
 		52968BBE2B406A8200D20342 /* Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implementation.swift; sourceTree = "<group>"; };
 		52D075582A52A71F00B5C692 /* Baekjoon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Baekjoon; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 		520EFE952BBDA3D3005871C6 /* Programmers */ = {
 			isa = PBXGroup;
 			children = (
+				528AF8802C355E7900E4EFC2 /* Level1 */,
 				520EFE962BBDA3DC005871C6 /* Level2 */,
 			);
 			path = Programmers;
@@ -312,6 +315,14 @@
 			path = DivideAndConquer;
 			sourceTree = "<group>";
 		};
+		528AF8802C355E7900E4EFC2 /* Level1 */ = {
+			isa = PBXGroup;
+			children = (
+				528AF8812C355E8800E4EFC2 /* Level1.swift */,
+			);
+			path = Level1;
+			sourceTree = "<group>";
+		};
 		528DCD182AFFEE9700DD283A /* Silver4 */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +455,7 @@
 				5229D2392A6A58B60045C48E /* Level10.swift in Sources */,
 				523F84472A8A02EC00BD5644 /* Sorting.swift in Sources */,
 				52893C882AC14ADB0027BAC3 /* DivideAndConquer.swift in Sources */,
+				528AF8822C355E8800E4EFC2 /* Level1.swift in Sources */,
 				52819EBD2AA5BA8E0006BD87 /* Recursion.swift in Sources */,
 				52E873DC2AE032CE00662723 /* PriorityQueue.swift in Sources */,
 				5219AB3F2A724940006E7FE8 /* Level12.swift in Sources */,
