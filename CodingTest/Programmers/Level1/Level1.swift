@@ -39,3 +39,17 @@
 //    }
 //    return sum
 //}
+
+// MARK: - 푸드 파이트 대회, 2024.07.12
+// MARK: - array와 동일하게 string도 동일 요소의 반복으로 정의할 수 있음 -> String(repeating: "a", count: 2)
+// MARK: - array와 동일하게 string도 reversed()를 사용할 수 있음
+//import Foundation
+//
+//func solution(_ food:[Int]) -> String {
+//    var s = String()
+//    for i in 1..<food.count {
+//        s += String(repeating: String(i), count: food[i]/2)
+//    }
+//    s += "0" + s.reversed()
+//    return s
+//}
