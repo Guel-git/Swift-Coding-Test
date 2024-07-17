@@ -53,3 +53,24 @@
 //    s += "0" + s.reversed()
 //    return s
 //}
+
+// MARK: - 없는 숫자 더하기, 2024.07.18
+//import Foundation
+//
+//func solution(_ numbers:[Int]) -> Int {
+//    var sortedNum = numbers.sorted(), index = 0, answer = 0, numCount = numbers.count
+//    compareRange: for i in 0...9 {
+//        if i == sortedNum[index] {
+//            index += 1
+//            if numCount == index {
+//                for l in i+1..<10 {
+//                    answer += l
+//                }
+//                break compareRange
+//            }
+//        } else {
+//            answer += i
+//        }
+//    }
+//    return answer
+//}
