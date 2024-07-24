@@ -364,3 +364,17 @@
 //    }
 //    return Int64(answer)
 //}
+
+// MARK: - n^2 배열 자르기, 2024.07.22
+// MARK: - 직관적으로 떠오르는 과정보다 계산 횟수를 최소화할 수 있는 방법 떠올리기
+//import Foundation
+//
+//func solution(_ n:Int, _ left:Int64, _ right:Int64) -> [Int] {
+//    var arr = [Int]()
+//    for i in Int(left)...Int(right) {
+//        let q = i / n
+//        let r = i % n
+//        arr.append(q < r ? r+1 : q+1)
+//    }
+//    return arr
+//}

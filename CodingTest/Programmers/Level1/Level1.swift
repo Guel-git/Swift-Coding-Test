@@ -74,3 +74,42 @@
 //    }
 //    return answer
 //}
+
+// MARK: - x만큼 간격이 있는 n개의 숫자, 2024.07.23
+//func solution(_ x:Int, _ n:Int) -> [Int] {
+//    var now = x, arr = [x]
+//    for _ in 1..<n {
+//        now += x
+//        arr.append(now)
+//    }
+//    return arr
+//}
+
+// MARK: - 문자열 내 마음대로 정렬하기, 2024.07.24
+//func solution(_ strings:[String], _ n:Int) -> [String] {
+//    var sortedStrings = strings.sorted {
+//        $0[$0.index($0.startIndex, offsetBy: n)] == $1[$1.index($1.startIndex, offsetBy: n)] ? $0 < $1 : $0[$0.index($0.startIndex, offsetBy: n)] < $1[$1.index($1.startIndex, offsetBy: n)]
+//    }
+//    return sortedStrings
+//}
+
+// MARK: - 숫자 문자열과 영단어, 2024.07.24
+// MARK: - UnicodeScalar(문자열).value로 문자와 숫자 구별
+//import Foundation
+//
+//func solution(_ s:String) -> Int {
+//    var dict = ["zero":"0", "one":"1", "two":"2", "three":"3", "four":"4", "five":"5", "six":"6", "seven":"7", "eight":"8", "nine":"9"]
+//    var stack = String(), answer = String()
+//    for c in s {
+//        if UnicodeScalar(String(c))!.value >= 97 && UnicodeScalar(String(c))!.value <= 122 {
+//            stack += String(c)
+//            if dict.keys.contains(stack) {
+//                answer += dict[stack]!
+//                stack = String()
+//            }
+//        } else {
+//            answer += String(c)
+//        }
+//    }
+//    return Int(answer)!
+//}
