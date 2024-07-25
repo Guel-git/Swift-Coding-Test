@@ -378,3 +378,29 @@
 //    }
 //    return arr
 //}
+
+// MARK: - 문자열 압축, 2024.07.25
+//import Foundation
+//
+//func solution(_ s:String) -> Int {
+//    var answer = [Int]()
+//    for i in 1...s.count {
+//        let firstStart = s.index(s.startIndex, offsetBy: 0), firstEnd = s.index(s.startIndex, offsetBy: i-1)
+//        var stack = [String(s[firstStart...firstEnd])], count = 0
+//        for j in stride(from: 1, to: s.count/i, by: 1) {
+//            let startIndex = s.index(s.startIndex, offsetBy: i*j), endIndex = s.index(s.startIndex, offsetBy: i*j+(i-1))
+//            let this = String(s[startIndex...endIndex])
+//            if stack.last == this {
+//                stack.append(this)
+//            } else {
+//                count += i + (stack.count > 1 ? Int(String(stack.count).count) : 0)
+//                stack = [this]
+//            }
+//        }
+//        if !stack.isEmpty { count += stack.count > 1 ? Int(String(stack.count).count) + i : i }
+//        count += s.count % i
+//        answer.append(count)
+//    }
+//    return answer.min()!
+//}
+//
