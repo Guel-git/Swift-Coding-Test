@@ -167,9 +167,9 @@
 		520EFE952BBDA3D3005871C6 /* Programmers */ = {
 			isa = PBXGroup;
 			children = (
-				528AF8832C53AD6600E4EFC2 /* Level3 */,
 				528AF8802C355E7900E4EFC2 /* Level1 */,
 				520EFE962BBDA3DC005871C6 /* Level2 */,
+				528AF8832C53AD6600E4EFC2 /* Level3 */,
 			);
 			path = Programmers;
 			sourceTree = "<group>";

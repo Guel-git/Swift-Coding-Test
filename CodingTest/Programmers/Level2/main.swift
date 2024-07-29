@@ -404,3 +404,34 @@
 //    return answer.min()!
 //}
 //
+
+// MARK: - 두 큐 합 같게 만들기, 2024.07.29
+//import Foundation
+//
+//func solution(_ queue1:[Int], _ queue2:[Int]) -> Int {
+//    var queue1 = queue1, queue2 = queue2
+//    var oneSum = queue1.reduce(0, +), twoSum = queue2.reduce(0, +), count = 0, index1 = 0, index2 = 0
+//    let goal = (oneSum + twoSum) / 2, maxCount = queue1.count * 3
+//
+//    if (oneSum + twoSum) % 2 == 1 { return -1 }
+//
+//    while count < maxCount {
+//        if oneSum == goal && twoSum == goal { return count }
+//        else if oneSum > twoSum {
+//            let item = queue1[index1]
+//            queue2.append(item)
+//            index1 += 1
+//            oneSum -= item
+//            twoSum += item
+//        } else {
+//            let item = queue2[index2]
+//            queue1.append(item)
+//            index2 += 1
+//            twoSum -= item
+//            oneSum += item
+//        }
+//        count += 1
+//    }
+//
+//    return -1
+//}
