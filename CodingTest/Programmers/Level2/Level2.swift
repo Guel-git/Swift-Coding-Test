@@ -435,3 +435,100 @@
 //
 //    return -1
 //}
+
+// MARK: - 의상, 2025.02.03
+//import Foundation
+//
+//func solution(_ clothes:[[String]]) -> Int {
+//    var dict = [String:Int]()
+//    clothes.forEach { dict[$0[1], default: 0] += 1 }
+//    
+//    let list = dict.map {$1}
+//    var result = 1
+//    
+//    for l in list {
+//        result *= (l + 1)
+//    }
+//    
+//    return result - 1
+//}
+
+// MARK: - 기능 개발, 2025.02.04
+//import Foundation
+//
+//func solution(_ progresses:[Int], _ speeds:[Int]) -> [Int] {
+//    var standard = ceil(Double(100 - progresses[0]) / Double(speeds[0])), count = 1, answer = [Int]()
+//    for i in 1..<progresses.count {
+//        var next = ceil(Double(100 - progresses[i]) / Double(speeds[i]))
+//        if next <= standard {
+//            count += 1
+//        } else {
+//            answer.append(count)
+//            count = 1
+//            standard = next
+//        }
+//    }
+//    
+//    answer.append(count)
+//    
+//    return answer
+//}
+
+// MARK: - H-Index, 2025.02.05
+//import Foundation
+//
+//func solution(_ citations:[Int]) -> Int {
+//    var answer = Int()
+//    var cit = citations.sorted(), arrayCount = citations.count
+//    for i in 0...10000 {
+//        
+//        // i번 이상 인용된 논문의 개수 계산
+//        var count = arrayCount
+//        for c in cit {
+//            if c < i {
+//                count -= 1
+//                continue
+//            }
+//            break
+//        }
+//        
+//        // i번 이상 인용된 논문의 개수가 i개 초과라면, break
+//        if i > count {
+//            answer = i
+//            break
+//        }
+//    }
+//    
+//    return answer - 1
+//}
+
+// MARK: - 타겟 넘버, 2025.02.06
+//func solution(_ numbers:[Int], _ target:Int) -> Int {
+//
+//    let c = numbers.count
+//    var visited = [Bool](), result = Int()
+//    
+//    func dfs(_ depth: Int, _ now: Int, _ start: Int) {
+//        if depth == now {
+//            var tmp = Int()
+//            for i in 0..<c {
+//                tmp += (visited[i] ? -1 : 1) * numbers[i]
+//            }
+//            if tmp == target { result += 1 }
+//            return
+//        }
+//        
+//        for j in start..<c {
+//            visited[j] = true
+//            dfs(depth, now+1, j+1)
+//            visited[j] = false
+//        }
+//    }
+//    
+//    for i in 1..<c {
+//        visited = Array(repeating: false, count: c)
+//        dfs(i, 0, 0)
+//    }
+//    
+//    return result
+//}
